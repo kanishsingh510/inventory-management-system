@@ -1,4 +1,5 @@
 import api from './api';
+import { buildProductQueryParams } from './productQueryParams';
 
 function extractCollection(payload) {
   if (Array.isArray(payload)) {
@@ -84,35 +85,13 @@ function serializeCreateProductInput(product) {
 }
 
 export async function getProducts(filters = {}) {
-  const params = {};
+  const params = buildProductQueryParams(filters);
 
-  if (filters.nameSearch?.trim()) {
-    params.nameSearch = filters.nameSearch.trim();
-  }
-
-  if (filters.skuSearch?.trim()) {
-    params.skuSearch = filters.skuSearch.trim();
-  }
-
-  if (filters.search?.trim()) {
-    params.search = filters.search.trim();
-  }
-
-  if (filters.category?.trim()) {
-    params.category = filters.category.trim();
-  }
-
-  if (filters.stockStatus?.trim()) {
-    params.stockStatus = filters.stockStatus.trim();
-  }
-
-  if (filters.minPrice !== '' && filters.minPrice !== undefined) {
-    params.minPrice = Number(filters.minPrice);
-  }
-
-  if (filters.maxPrice !== '' && filters.maxPrice !== undefined) {
-    params.maxPrice = Number(filters.maxPrice);
-  }
+  console.log('Product search values:', {
+    nameSearch: filters.nameSearch?.trim() ?? '',
+    skuSearch: filters.skuSearch?.trim() ?? ''
+  });
+  console.log('GET /products params:', params);
 
   const response = await api.get('/products', { params });
   return extractCollection(response.data).map(normalizeProduct);

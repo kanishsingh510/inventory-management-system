@@ -5,11 +5,12 @@ import Card from '../components/Card';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PageHeader from '../components/PageHeader';
 import StatusMessage from '../components/StatusMessage';
-import api, { getApiErrorMessage } from '../services/api';
+import { getApiErrorMessage } from '../services/api';
 import {
   deleteProduct,
   getCategories,
-  getInventoryHistory
+  getInventoryHistory,
+  getProducts
 } from '../services/products';
 
 const initialFilters = {
@@ -46,30 +47,6 @@ function formatDate(value) {
     hour: 'numeric',
     minute: '2-digit'
   }).format(date);
-}
-
-function normalizeProductsResponse(payload) {
-  const data = Array.isArray(payload)
-    ? payload
-    : Array.isArray(payload?.data)
-      ? payload.data
-      : Array.isArray(payload?.products)
-        ? payload.products
-        : [];
-
-  return data.map((product) => ({
-    id: product.id ?? product._id ?? product.productId ?? '',
-    title: product.title ?? product.name ?? 'Untitled product',
-    category: product.category ?? '',
-    sku: product.sku ?? '',
-    lowStockThreshold:
-      product.lowStockThreshold !== undefined && product.lowStockThreshold !== null
-        ? Number(product.lowStockThreshold)
-        : '',
-    isLowStock: Boolean(product.isLowStock),
-    stock: Number(product.stock ?? product.quantity ?? 0),
-    price: Number(product.price ?? 0)
-  }));
 }
 
 function HistoryModal({ error, history, isLoading, onClose, product }) {
@@ -163,49 +140,72 @@ export default function ProductsPage() {
   const [error, setError] = useState('');
   const [hasLoadedProducts, setHasLoadedProducts] = useState(false);
 
-  async function fetchProducts() {
-    try {
-      console.log('Sending:', { nameSearch, skuSearch });
+  async function fetchProducts(overrides = {}) {
+    const filters = {
+      nameSearch,
+      skuSearch,
+      category,
+      minPrice,
+      maxPrice,
+      stockStatus,
+      ...overrides
+    };
 
-      const response = await api.get('/products', {
-        params: {
-          nameSearch: nameSearch || undefined,
-          skuSearch: skuSearch || undefined,
-          category: category || undefined,
-          minPrice: minPrice || undefined,
-          maxPrice: maxPrice || undefined,
-          stockStatus: stockStatus || undefined
-        }
-      });
-
-      return normalizeProductsResponse(response.data);
-    } catch (err) {
-      console.error(err);
-      throw err;
-    }
+    console.log('Fetching products with filters:', filters);
+    return getProducts(filters);
   }
 
   useEffect(() => {
-    async function loadCategories() {
-      try {
-        const categoryData = await getCategories();
-        setCategories(categoryData);
-      } catch (requestError) {
-        setError(getApiErrorMessage(requestError));
-      }
-    }
-
-    loadCategories();
-  }, []);
+    console.log('Products search input changed:', {
+      nameSearch: nameSearch.trim(),
+      skuSearch: skuSearch.trim()
+    });
+  }, [nameSearch, skuSearch]);
 
   useEffect(() => {
     let isActive = true;
 
-    async function loadProducts() {
-      if (hasLoadedProducts) {
-        setIsRefreshing(true);
-      }
+    async function loadInitialData() {
+      try {
+        const [categoryData, productData] = await Promise.all([
+          getCategories(),
+          fetchProducts()
+        ]);
 
+        if (!isActive) {
+          return;
+        }
+
+        setCategories(categoryData);
+        setProducts(productData);
+        setHasLoadedProducts(true);
+      } catch (requestError) {
+        if (isActive) {
+          setError(getApiErrorMessage(requestError));
+        }
+      } finally {
+        if (isActive) {
+          setIsLoading(false);
+        }
+      }
+    }
+
+    loadInitialData();
+
+    return () => {
+      isActive = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!hasLoadedProducts) {
+      return undefined;
+    }
+
+    let isActive = true;
+
+    async function loadProducts() {
+      setIsRefreshing(true);
       setError('');
 
       try {
@@ -232,7 +232,7 @@ export default function ProductsPage() {
     return () => {
       isActive = false;
     };
-  }, [nameSearch, skuSearch, category, minPrice, maxPrice, stockStatus]);
+  }, [nameSearch, skuSearch, category, minPrice, maxPrice, stockStatus, hasLoadedProducts]);
 
   useEffect(() => {
     if (location.state?.message) {
