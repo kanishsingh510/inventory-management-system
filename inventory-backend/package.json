@@ -8,7 +8,7 @@
     "dev": "nodemon server.js",
     "start": "node server.js",
     "seed": "node scripts/seedSampleData.js",
-    "test": "node scripts/smokeTest.js"
+    "test": "node scripts/testProductFilters.js && node scripts/smokeTest.js"
   },
   "keywords": [],
   "author": "",

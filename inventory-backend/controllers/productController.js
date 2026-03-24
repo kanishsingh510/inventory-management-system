@@ -3,6 +3,7 @@ import InventoryLog from "../models/InventoryLog.js";
 import InventoryHistory from "../models/InventoryHistory.js";
 import asyncHandler from "../utils/asyncHandler.js";
 import { createInventoryLog, getChangeDetailsFromDelta } from "../utils/inventory.js";
+import { buildProductFilters } from "../utils/productFilters.js";
 import {
   createInventoryHistoryEntry,
   getHistoryActionFromChange,
@@ -148,11 +149,12 @@ const normalizeQuantity = (value, { required = false } = {}) => {
   return numericValue;
 };
 
-const escapeRegex = (value) =>
-  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
 const normalizePrice = (value, fieldName, { required = false } = {}) => {
-  if (value === undefined) {
+  if (
+    value === undefined ||
+    value === null ||
+    (typeof value === "string" && value.trim() === "")
+  ) {
     if (required) {
       const error = new Error(`${fieldName} is required`);
       error.statusCode = 400;
@@ -176,88 +178,6 @@ const normalizePrice = (value, fieldName, { required = false } = {}) => {
 const resolveProductName = ({ name, title }) => name ?? title;
 
 const resolveProductQuantity = ({ quantity, stock }) => quantity ?? stock;
-
-const buildProductFilters = ({
-  nameSearch,
-  skuSearch,
-  category,
-  stockStatus,
-  minPrice,
-  maxPrice,
-}) => {
-  const query = {};
-  const andClauses = [];
-  const normalizedNameSearch = nameSearch?.trim();
-  const normalizedSkuSearch = skuSearch?.trim();
-  const normalizedCategory = category?.trim();
-
-  if (normalizedNameSearch) {
-    query.title = { $regex: normalizedNameSearch, $options: "i" };
-  }
-
-  if (normalizedSkuSearch) {
-    query.sku = { $regex: normalizedSkuSearch, $options: "i" };
-  }
-
-  if (normalizedCategory && normalizedCategory !== "All Categories") {
-    const validatedCategory = normalizeCategory(normalizedCategory);
-
-    if (validatedCategory === "Other") {
-      andClauses.push({
-        $or: [
-          { category: "Other" },
-          { category: { $exists: false } },
-          { category: null },
-          { category: "" },
-        ],
-      });
-    } else {
-      query.category = validatedCategory;
-    }
-  }
-
-  const normalizedMinPrice = normalizePrice(minPrice, "minPrice");
-  const normalizedMaxPrice = normalizePrice(maxPrice, "maxPrice");
-
-  if (
-    normalizedMinPrice !== undefined &&
-    normalizedMaxPrice !== undefined &&
-    normalizedMinPrice > normalizedMaxPrice
-  ) {
-    const error = new Error("minPrice cannot be greater than maxPrice");
-    error.statusCode = 400;
-    throw error;
-  }
-
-  if (
-    normalizedMinPrice !== undefined ||
-    normalizedMaxPrice !== undefined
-  ) {
-    query.price = {
-      ...(normalizedMinPrice !== undefined ? { $gte: normalizedMinPrice } : {}),
-      ...(normalizedMaxPrice !== undefined ? { $lte: normalizedMaxPrice } : {}),
-    };
-  }
-
-  if (
-    stockStatus !== undefined &&
-    stockStatus !== "low" &&
-    stockStatus !== "inStock" &&
-    stockStatus !== ""
-  ) {
-    const error = new Error("stockStatus must be either low or inStock");
-    error.statusCode = 400;
-    throw error;
-  }
-
-  if (andClauses.length === 1) {
-    Object.assign(query, andClauses[0]);
-  } else if (andClauses.length > 1) {
-    query.$and = andClauses;
-  }
-
-  return query;
-};
 
 // Create a new product and record the initial stock as an inventory event.
 export const createProduct = async (req, res) => {
@@ -346,8 +266,13 @@ export const createProduct = async (req, res) => {
 
 // Fetch all products for dashboard or listing screens.
 export const getProducts = asyncHandler(async (req, res) => {
-  const query = buildProductFilters(req.query);
-  console.log("Query:", query);
+  console.log("GET /api/products req.query:", req.query);
+  const query = buildProductFilters({
+    ...req.query,
+    normalizeCategory,
+    normalizePrice,
+  });
+  console.log("GET /api/products final query:", JSON.stringify(query));
   let products = await Product.find(query).sort({ createdAt: -1 });
 
   if (req.query.stockStatus === "low") {
