@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
 import StatusMessage from './StatusMessage';
@@ -19,6 +20,15 @@ export default function AuthForm({
   footerLinkLabel,
   footerTo
 }) {
+  const [visiblePasswords, setVisiblePasswords] = useState({});
+
+  function togglePasswordVisibility(fieldName) {
+    setVisiblePasswords((current) => ({
+      ...current,
+      [fieldName]: !current[fieldName]
+    }));
+  }
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-slate-100">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.16),transparent_24%),radial-gradient(circle_at_top_right,rgba(99,102,241,0.18),transparent_28%),linear-gradient(180deg,#020617_0%,#08111f_38%,#0a1020_100%)]" />
@@ -76,23 +86,71 @@ export default function AuthForm({
               {error ? <div className="mt-6"><StatusMessage type="error">{error}</StatusMessage></div> : null}
 
               <form className="mt-6 space-y-5" onSubmit={onSubmit}>
-                {fields.map((field) => (
-                  <label key={field.name} className="block">
-                    <span className="mb-2 block text-sm font-semibold text-slate-200">
-                      {field.label}
-                    </span>
-                    <input
-                      name={field.name}
-                      type={field.type}
-                      value={values[field.name] ?? ''}
-                      onChange={onChange}
-                      autoComplete={field.autoComplete}
-                      placeholder={field.placeholder}
-                      className="w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/40 focus:bg-white/[0.06] focus:ring-2 focus:ring-cyan-300/20"
-                      required={field.required !== false}
-                    />
-                  </label>
-                ))}
+                {fields.map((field) => {
+                  const isPasswordField = field.type === 'password';
+                  const isVisible = Boolean(visiblePasswords[field.name]);
+
+                  return (
+                    <label key={field.name} className="block">
+                      <span className="mb-2 block text-sm font-semibold text-slate-200">
+                        {field.label}
+                      </span>
+                      <div className="relative">
+                        <input
+                          name={field.name}
+                          type={isPasswordField && isVisible ? 'text' : field.type}
+                          value={values[field.name] ?? ''}
+                          onChange={onChange}
+                          autoComplete={field.autoComplete}
+                          placeholder={field.placeholder}
+                          className={`w-full rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/40 focus:bg-white/[0.06] focus:ring-2 focus:ring-cyan-300/20 ${
+                            isPasswordField ? 'pr-12' : ''
+                          }`}
+                          required={field.required !== false}
+                        />
+                        {isPasswordField ? (
+                          <button
+                            type="button"
+                            onClick={() => togglePasswordVisibility(field.name)}
+                            className="absolute inset-y-0 right-0 flex items-center justify-center px-4 text-slate-400 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-300/30"
+                            aria-label={isVisible ? 'Hide password' : 'Show password'}
+                            aria-pressed={isVisible}
+                          >
+                            {isVisible ? (
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="1.8"
+                                className="h-5 w-5"
+                                aria-hidden="true"
+                              >
+                                <path d="M3 3l18 18" />
+                                <path d="M10.58 10.58a2 2 0 0 0 2.84 2.84" />
+                                <path d="M9.88 5.09A9.77 9.77 0 0 1 12 4.91c5 0 9.27 3 10 7.09a10.66 10.66 0 0 1-4.24 5.94" />
+                                <path d="M6.61 6.61A10.7 10.7 0 0 0 2 12c.73 4.09 5 7.09 10 7.09a9.8 9.8 0 0 0 4.11-.88" />
+                              </svg>
+                            ) : (
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="1.8"
+                                className="h-5 w-5"
+                                aria-hidden="true"
+                              >
+                                <path d="M2 12s3.64-7 10-7 10 7 10 7-3.64 7-10 7-10-7-10-7Z" />
+                                <circle cx="12" cy="12" r="3" />
+                              </svg>
+                            )}
+                          </button>
+                        ) : null}
+                      </div>
+                    </label>
+                  );
+                })}
 
                 {children}
 

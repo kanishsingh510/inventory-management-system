@@ -2967,3 +2967,14 @@ GET /api/analytics/stock-trend response: [
   }
 ]
 Dashboard API hit: GET /api/dashboard
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js server.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  override existing env vars with { override: true }
+MongoDB connected successfully
+Server running on port 5000
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js server.js`[39m
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+MongoDB connected successfully
+Server running on port 5000
