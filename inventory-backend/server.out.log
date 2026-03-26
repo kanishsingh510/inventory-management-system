@@ -1852,3 +1852,1024 @@ GET /api/analytics/category-distribution response: [
     value: 11
   }
 ]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+Dashboard API hit: GET /api/dashboard
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] { skuSearch: 'i' }
+GET /api/products final query: {"$and":[{"sku":{"$regex":"i","$options":"i"}}]}
+Results: 5
+GET /api/products req.query: [Object: null prototype] { skuSearch: 'ip' }
+GET /api/products final query: {"$and":[{"sku":{"$regex":"ip","$options":"i"}}]}
+Results: 3
+GET /api/products req.query: [Object: null prototype] { skuSearch: 'ip1' }
+GET /api/products final query: {"$and":[{"sku":{"$regex":"ip1","$options":"i"}}]}
+Results: 3
+GET /api/products req.query: [Object: null prototype] { skuSearch: 'ip16' }
+GET /api/products final query: {"$and":[{"sku":{"$regex":"ip16","$options":"i"}}]}
+Results: 1
+GET /api/products req.query: [Object: null prototype] { skuSearch: 'ip1' }
+GET /api/products final query: {"$and":[{"sku":{"$regex":"ip1","$options":"i"}}]}
+Results: 3
+GET /api/products req.query: [Object: null prototype] { skuSearch: 'ip' }
+GET /api/products final query: {"$and":[{"sku":{"$regex":"ip","$options":"i"}}]}
+GET /api/products req.query: [Object: null prototype] { skuSearch: 'i' }
+GET /api/products final query: {"$and":[{"sku":{"$regex":"i","$options":"i"}}]}
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 3
+Results: 5
+Results: 5
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 169,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 169
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 180,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 180
+  }
+]
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+GET /api/products req.query: [Object: null prototype] {}
+GET /api/products final query: {}
+Results: 5
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 181,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 181
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 170,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 170
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 181,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 181
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 170,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 170
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 181,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 181
+  }
+]
+Dashboard API hit: GET /api/dashboard
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 170,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 170
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
+GET /api/analytics/stock-trend response: [
+  {
+    totalQuantity: 43,
+    productCount: 2,
+    date: '2026-03-19',
+    label: '2026-03-19',
+    value: 43
+  },
+  {
+    totalQuantity: 25,
+    productCount: 1,
+    date: '2026-03-20',
+    label: '2026-03-20',
+    value: 25
+  },
+  {
+    totalQuantity: 181,
+    productCount: 2,
+    date: '2026-03-24',
+    label: '2026-03-24',
+    value: 181
+  }
+]
+GET /api/analytics/category-distribution response: [
+  {
+    productCount: 1,
+    totalQuantity: 170,
+    category: 'Clothing',
+    name: 'Clothing',
+    value: 170
+  },
+  {
+    productCount: 3,
+    totalQuantity: 68,
+    category: 'Other',
+    name: 'Other',
+    value: 68
+  },
+  {
+    productCount: 1,
+    totalQuantity: 11,
+    category: 'Electronics',
+    name: 'Electronics',
+    value: 11
+  }
+]
